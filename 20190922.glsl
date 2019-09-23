@@ -16,8 +16,8 @@ void main(){
     vec3 yellow = vec3(1.,1.,0.);
     vec3 color = vec3(0.,0.,0.);
     
-    float l = distance(position,p)*5.*(abs(sin(time*5.))+1.);
-    color = l_blue*fract(l);
+    float l = distance(position,p)*5.*(abs(sin(time*9.5))+1.);
+    color = l_blue*fract(pow(l,1.5));
 
     p = (gl_FragCoord.xy*2.0-resolution)/min(resolution.x,resolution.y);
     float a = mix(p.x*p.x,p.y,sin(time));
